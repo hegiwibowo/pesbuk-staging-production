@@ -17,7 +17,7 @@ spec:
     spec:
       containers:
       - name: pesbuk
-        image: hegiwibowo/pesbuk-with-secret:1.1
+        image: hegiwibowo/pesbuk-with-secret-staging:1.0
         ports:
         - containerPort: 80
         env:
