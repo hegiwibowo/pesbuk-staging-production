@@ -4,10 +4,13 @@ metadata:
   name: pesbuk-ingress
   namespace: pesbuk-production
   annotations:
-    nginx.ingress.kubernetes.io/rewrite-target: /
+    ## Untuk menaikan batas upload file
+    nginx.org/client-max-body-size: "10m"
+    ## Memaksa jalan di https
+    nginx.ingress.kubernetes.io/force-ssl-redirect: "true"
 spec:
   rules:
-  - host: pesbuk.hegiwibowo.xyz
+  - host: pd-pesbuk.hegiwibowo.xyz
     http:
       paths:
       #- path: /belajar
